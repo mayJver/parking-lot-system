@@ -1,0 +1,19 @@
+# Credentials and testing
+conexion.php
+test.php
+.env
+
+# Dynamic files
+uploads/
+
+# Nano editor temporary files
+*~
+*.save
+
+# Server logs
+*.log
+error_log
+
+# OS generated files
+.DS_Store
+Thumbs.db

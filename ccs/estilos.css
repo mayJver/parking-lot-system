@@ -1,0 +1,241 @@
+/* ==========================================================================
+   1. RESET & VARIABLES GLOBALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --color-principal: #1e293b; /* Azul pizarra oscuro */
+    --color-secundario: #0f172a; /* Azul casi negro */
+    --color-acento: #10b981; /* Verde esmeralda (Éxito/Altas) */
+    --color-peligro: #ef4444; /* Rojo (Bajas/Salir) */
+    --color-fondo: #f8fafc; /* Gris muy claro */
+    --color-tarjeta: #ffffff;
+    --texto-oscuro: #334155;
+    --texto-claro: #f1f5f9;
+    --borde: #e2e8f0;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--texto-oscuro);
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. DISEÑO DEL LOGIN (PANTALLA COMPLETA)
+   ========================================================================== */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-principal) 100%);
+}
+
+.login-container {
+    background-color: var(--color-tarjeta);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-principal);
+    font-size: 1.6rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: var(--color-principal);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-login:hover {
+    background-color: #059669;
+}
+
+/* ==========================================================================
+   3. MENÚ DE NAVEGACIÓN (NAVBAR)
+   ========================================================================== */
+.navbar {
+    background-color: var(--color-principal);
+    color: var(--texto-claro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.menu-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.menu-links a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu-links a:hover {
+    color: var(--color-acento);
+}
+
+/* ==========================================================================
+   4. MAQUETACIÓN DE CONTENIDO (PÁGINAS INTERNAS)
+   ========================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.page-title {
+    margin-bottom: 1.5rem;
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--borde);
+    padding-bottom: 0.5rem;
+}
+
+/* Tarjetas para los Formularios de Altas, Mantenimiento, etc. */
+.card-form {
+    background-color: var(--color-tarjeta);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   5. GRID DEL PARKING (GALERÍA DE AUTOS)
+   ========================================================================== */
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.coche-card {
+    background-color: var(--color-tarjeta);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--borde);
+    display: flex;
+    flex-direction: column;
+}
+
+.coche-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    background-color: #e2e8f0;
+}
+
+.coche-info {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.coche-placa {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-principal);
+    background-color: #f1f5f9;
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+}
+
+.coche-modelo {
+    font-size: 1rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 1rem;
+}
+
+/* Botones de acción dentro de las tarjetas */
+.btn-action {
+    display: block;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.btn-action:hover {
+    opacity: 0.9;
+}
+
+.btn-baja {
+    background-color: var(--color-peligro);
+    color: white;
+}
