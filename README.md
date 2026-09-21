@@ -29,8 +29,8 @@ To run this project locally, you will need a standard LAMP/XAMPP environment (PH
 Open your terminal and clone this project into your local server directory (e.g., `htdocs` for XAMPP or `/var/www/html` for standard Apache):
 
 ```bash
-git clone [https://github.com/igonzalez/workshop-management.git](https://github.com/igonzalez/workshop-management.git)
-cd workshop-management
+git clone [https://github.com/mayJver/parking-lot-system.git](https://github.com/mayJver/parking-lot-system.git)
+cd parking-lot-system
 
 2. Database Setup
 
@@ -65,6 +65,6 @@ Since the actual database credentials are intentionally ignored via .gitignore f
 
     3.-Open conexion.php and update the credentials to match your local MySQL server environment.
 
-Once configured, simply navigate to http://localhost/workshop-management in your browser to start using the system.
+Once configured, simply navigate to http://localhost/parking-lot-system in your browser to start using the system.
 
 
