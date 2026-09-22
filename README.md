@@ -29,7 +29,7 @@ To run this project locally, you will need a standard LAMP/XAMPP environment (PH
 Open your terminal and clone this project into your local server directory (e.g., `htdocs` for XAMPP or `/var/www/html` for standard Apache):
 
 ```bash
-git clone (https://github.com/mayJver/parking-lot-system.git)
+git clone https://github.com/mayJver/parking-lot-system.git
 cd parking-lot-system
 
 2. Database Setup
