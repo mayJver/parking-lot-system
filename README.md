@@ -21,7 +21,7 @@ The Workshop Management System streamlines the workflow between administrators a
 *   **Maintenance & Repair Logs:** Relational logs that dynamically tie specific vehicles and mechanics to detailed service entries.
 *   **Data Integrity:** Implements `ON DELETE CASCADE` and restrictive relational logic to prevent orphaned records in the database.
 
-##Installation & Local Setup
+## Installation & Local Setup
 
 To run this project locally, you will need a standard LAMP/XAMPP environment (PHP and MySQL/MariaDB).
 
